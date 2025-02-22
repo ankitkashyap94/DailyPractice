@@ -3,8 +3,9 @@ public class FabonacciSeries {
         //fab(10);
         int count = 10;
         for (int i = 0; i < count; i++) {
-            System.out.print(fabUsingRecurssion(i) + " ");
+            System.out.print( fab2(i) + " ");
         }
+
     }
 
     public static void fab(int count) {
@@ -34,5 +35,18 @@ public class FabonacciSeries {
         int fib = fabUsingRecurssion(n - 1) + fabUsingRecurssion(n - 2);
 
         return fib;
+    }
+
+    public static int fab2(int nos){
+
+
+        if(nos<=1){
+            return nos;
+        }
+        int fabnci = fab2(nos-1) +  fab2(nos-2);
+
+
+        return fabnci;
+
     }
 }

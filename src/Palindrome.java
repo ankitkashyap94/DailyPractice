@@ -11,8 +11,9 @@ public class Palindrome {
         while (num != 0) {
 
             int digit = num % 10; //extract last digit from number;
-            num = num / 10; //remove last digit from number;
             rev = rev * 10 + digit; //append digit to reverse.
+            num = num / 10; //remove last digit from number;
+
 
         }
 
