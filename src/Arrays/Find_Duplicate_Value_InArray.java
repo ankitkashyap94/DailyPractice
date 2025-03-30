@@ -2,6 +2,8 @@ package Arrays;
 
     //{ Driver Code Starts
 import java.io.*;
+import java.sql.SQLOutput;
+import java.time.LocalTime;
 import java.util.*;
 
     class Find_Duplicate_Value_InArray {
@@ -9,9 +11,14 @@ import java.util.*;
         public static void main(String[] args) {
             int[] arr = {10, 25, 3, 50, 12, 25, 48, 3, 0, 19, 50, 42, 8, 3, 20, 25, 14, 47, 10, 6};
 
-            //[] arr = {2,3,1,2,3};
+            //int[] arr = {2,3,1,2,3};
+            Long start = System.currentTimeMillis();
+
             findDuplicates(arr);
 
+            Long end = System.currentTimeMillis();
+
+            System.out.println("Execution time : " + (end - start) + "ms");
         }
         public static void findDuplicates(int[] arr){
 
@@ -21,9 +28,9 @@ import java.util.*;
 
             for(int i = 0; i<=arr.length-1; i++){
                 if(!hs.contains(arr[i])){
-                    hs.add(i);
+                    hs.add(arr[i]);
                 }else{
-                    duplicate.add(i);
+                    duplicate.add(arr[i]);
                 }
             }
 

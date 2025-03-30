@@ -1,39 +1,26 @@
+import java.util.Scanner;
+
 public class Practice {
     public static void main(String[] args) {
 
-        int a = 18;
-        a += 10;
-        System.out.println(a);
-        System.out.println(64>5 || 64>98);
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
 
-        float sum = 7/4.0f * 9/2.0f;
-        System.out.println(sum);
+       try{
+           int result = divide(a,b);
+           System.out.println(result);
 
-        char grade = 'A';
-        grade = (char)(grade +8);
-        System.out.println(grade);
+       }catch(Exception e){
+           System.out.println(e);
+       }
+    }
 
-        grade = (char)(grade -8);
-        System.out.println(grade);
-
-        int v = 20;
-        int u = 10;
-        int as = 20;
-        int s = 15;
-
-        float res = (float)(v*v - u*u)/(2*as*s);
-        System.out.println(res);
-
-        String name = new String("Ankit");
-        System.out.println(name +" !"+ " How are you doing ?");
-
-        System.out.printf("My name is %s and the value of a = %d and the value of b = %f", name, v, res);
-        System.out.println();
-        char[] nameArr = name.toLowerCase().toCharArray();
-        for(int i = nameArr.length-1; i>=0; i--){
-            System.out.println(nameArr[i]);
-
-        }
-
+    public static int divide(int a, int b) throws ArithmeticException {
+        int result = a / b;
+        return result;
     }
 }
+
+
+
